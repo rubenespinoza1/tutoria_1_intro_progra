@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class App2 {
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         System.out.println("Hello, World!");//Escribir "Hello, World!";
         Scanner intro = new Scanner(System.in);
         int numero1 = intro.nextInt();//numero1 = 1;
