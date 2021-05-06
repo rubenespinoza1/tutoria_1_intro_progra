@@ -1,12 +1,15 @@
 import java.util.Scanner;
 
-public class App4 {
+public class App5 {
 
     public static void main(String[] args){
 
+
+
         int contador = 0;
 
-        while(contador < 10){// Se valida al principio por lo que si la condicion no se satisface no entra al ciclo
+        do{
+
             Scanner intro = new Scanner(System.in);
 
             System.out.println("Ingrese un numero");
@@ -18,8 +21,9 @@ public class App4 {
             System.out.println("El numero " + numeroIngresado + " Es par? " + esPar);
 
             contador++;
-        }
+
+        }while(contador < 10);//Se valida al final entonces entra por lo menos una ves al ciclo
 
     }
-
+    
 }
