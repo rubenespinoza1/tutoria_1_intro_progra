@@ -6,7 +6,7 @@ public class App8 {
 
         Scanner intro = new Scanner(System.in);
 
-        int numeroUser = 0;
+        int numeroUser = -99999999;
         int numeroAnterior;
         int cantNumeros = 0;
 
