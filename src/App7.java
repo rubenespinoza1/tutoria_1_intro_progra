@@ -3,27 +3,22 @@ import java.util.Scanner;
 public class App7 {
     
     public static void main(String[] args){
-
         Scanner intro = new Scanner(System.in);
-
         System.out.println("Ingrese un numero");
+        int numeroUsuario = intro.nextInt();
 
-        int numeroUser = intro.nextInt();
-        int factorial = 0;
+        int factorial = 1;
 
-        for (int i = 1; i <= numeroUser; i++) {
+        for (int i = 1; i <= numeroUsuario; i++){
 
-            if (i == 1){
-                factorial = i;
-            }else{
-                //factorial = factorial * i;
-                factorial *= i;
-            }
+            //factorial = factorial * i;
+            factorial *= i;
 
         }
 
+        System.out.println("El factorial es: " + factorial);
 
-        System.out.println("factorial " + factorial);
+        
 
     }
 
