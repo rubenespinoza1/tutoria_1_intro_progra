@@ -13,7 +13,7 @@ public class App7 {
 
             //factorial = factorial * i;
             factorial *= i;
-
+            
         }
 
         System.out.println("El factorial es: " + factorial);
