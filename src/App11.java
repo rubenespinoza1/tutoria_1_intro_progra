@@ -14,9 +14,8 @@ public class App11 {
                     divisionesPerfectas++;
                 }
             }
-            if (divisionesPerfectas == 2){
-                System.out.println("El numero " + nroActual + " es un numero primo");
-            }
+            System.out.println(divisionesPerfectas == 2 ? "El numero " + nroActual + " es un numero primo" : "El numero " + nroActual + " no es un numero primo");
+            
         }
 
     }
