@@ -11,7 +11,7 @@ public class App17 {
         System.out.println((numeroStringAInt + 10));
 
 
-        String numeroStr2 = "13";
+        String numeroStr2 = "13";// era "*"
         int numeroAInt;
         try{
             numeroAInt = Integer.parseInt(numeroStr2);
