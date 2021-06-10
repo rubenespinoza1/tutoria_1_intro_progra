@@ -19,4 +19,6 @@ public class App19 {
         return divPerfectas == 2;
     }
 
+
+
 }
