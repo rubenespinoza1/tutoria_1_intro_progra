@@ -9,6 +9,7 @@ public class App23 {
         //[0-9a-z]{1,4}
         System.out.println(nombre.charAt(2));//b
         System.out.println(nombre.length());
+        System.out.println(nombre.equals("-s Ruben"));//nombre == -s Ruben
         String nombreSString = nombre.substring(2);
         System.out.println(nombreSString);
         System.out.println(nombre.startsWith("-s "));
@@ -17,7 +18,7 @@ public class App23 {
         String palabra = "reconocer";
         System.out.println(esPalindromo(palabra));
 
-        String operacion = "3 + 4.5";
+        String operacion = "3 / 2";
 
         System.out.println(resolverEcuacion(operacion));
         //reconocer
