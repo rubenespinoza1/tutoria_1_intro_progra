@@ -16,6 +16,10 @@ public class App23 {
         System.out.println(nombre.contains("bon"));
         String palabra = "reconocer";
         System.out.println(esPalindromo(palabra));
+
+        String operacion = "3 + 4.5";
+
+        System.out.println(resolverEcuacion(operacion));
         //reconocer
     }
 
@@ -31,5 +35,34 @@ public class App23 {
         }
         return true;
     }
+
+    private static double resolverEcuacion(String ecuacion){
+        String[] parsedEcuation = ecuacion.split(" ");
+        double resultado;
+        switch (parsedEcuation[1]){
+            case "+":
+                resultado = Double.parseDouble(parsedEcuation[0]) + Double.parseDouble(parsedEcuation[2]);
+                break;
+            case "-":
+                resultado = Double.parseDouble(parsedEcuation[0]) - Double.parseDouble(parsedEcuation[2]);
+                break;
+            case "*":
+                resultado = Double.parseDouble(parsedEcuation[0]) * Double.parseDouble(parsedEcuation[2]);
+                break;
+            case "/":
+                if (parsedEcuation[2] == "0"){
+                    System.out.println("No se puede dividir por 0");
+                    return 0;
+                }
+                resultado = Double.parseDouble(parsedEcuation[0]) / Double.parseDouble(parsedEcuation[2]);
+                break;
+            default:
+                resultado = 0;
+                break;
+        }
+
+        return resultado;
+    }
+
 
 }
