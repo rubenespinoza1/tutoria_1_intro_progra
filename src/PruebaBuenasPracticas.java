@@ -2,32 +2,49 @@ import java.util.Random;
 
 public class PruebaBuenasPracticas {
 
+    private static int[] asistentesMensuales = new int[30];
+    private static Random random = new Random();
+
     public static void main(String[] args) {
-        //programa para pasar lista mensual de un curso de 25 personas
-        Random numero = new Random();
-        int[] x = new int[30];
-        boolean[] y = new boolean[25];
-        int z = 0, a = 0;
+        iniciarPrograma();
+    }
 
-        while (a < x.length){
-            y[z] = numero.nextBoolean();//asiste estudiante numero z (si/no)
-
-            if (z == (25 - 1)){//cuando se llega al ultimo estudiante numero z
-                int c = 0;
-                for (int b = 0; b < y.length; b++){//Cuenta los asistentes
-                    if (y[b]){//Esto es exactamente lo mismo que escribir y[b] == true
-                        c++;
-                    }
-                }
-                x[a] = c;//la cantidad de asistentes en el dia a fueron c estudiantes
-                a++;
-                z = 0;
-            }
-            z++;
+    private static void iniciarPrograma(){
+        for (int diaDelMes = 0; diaDelMes < asistentesMensuales.length; diaDelMes++) {
+            boolean[] lista = pasarListaDiaria();
+            //int cantidadAsistentes = obtenerAsistentesSegunLista(lista);
+            registrarAsistentesDiarios(obtenerAsistentesSegunLista(lista), diaDelMes);
         }
-        for (int i = 0; i < x.length; i++) {
-            System.out.println("asistieron: " + x[i]);
+        mostrarAsistentesMesuales();
+    }
+
+    private static void registrarAsistentesDiarios(int asistentes, int diaMes){
+        asistentesMensuales[diaMes] = asistentes;
+    }
+
+    private static boolean[] pasarListaDiaria(){
+        boolean[] listaDeAlumnos = new boolean[25];
+        for (int numeroEstudiante = 0; numeroEstudiante < listaDeAlumnos.length; numeroEstudiante++) {
+            listaDeAlumnos[numeroEstudiante] = random.nextBoolean();
+        }
+        return listaDeAlumnos;
+    }
+
+    private static int obtenerAsistentesSegunLista(boolean[] lista){
+        int cantidadDeAsistentes = 0;
+        for (int nroEstudiante = 0; nroEstudiante < lista.length; nroEstudiante++) {
+            if (lista[nroEstudiante]){
+                cantidadDeAsistentes++;
+            }
+        }
+        return cantidadDeAsistentes;
+    }
+
+    private static void mostrarAsistentesMesuales(){
+        for (int i = 0; i < asistentesMensuales.length; i++) {
+            System.out.println("Asistieron: " + asistentesMensuales[i] + " estudiantes en el dia " + (i + 1) + " del mes.");
         }
     }
+
 
 }
