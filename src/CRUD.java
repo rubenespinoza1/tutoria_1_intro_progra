@@ -73,11 +73,11 @@ public class CRUD {
     }
 
     public static String read(){
-
+        return null;
     }
 
     public static boolean update(){
-
+        return false;
     }
 
     public static boolean delete(){
