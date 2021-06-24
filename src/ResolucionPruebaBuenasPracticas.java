@@ -5,47 +5,6 @@ public class ResolucionPruebaBuenasPracticas {
     private static Scanner teclado = new Scanner(System.in);
     public static void main(String[] args) {
         iniciarPrograma();
-
-
-        //para los a elementos preguntar datos de los produtos
-        System.out.println("ingrese la cantidad de unidades del primer producto");
-        int b1=teclado.nextInt();
-        System.out.println("ingrese el valor unitario del primer producto");
-        double p1=teclado.nextInt();
-        System.out.println("ingrese el costo unitario del primer producto");
-        double c1=teclado.nextInt();
-
-        System.out.println("ingrese la cantidad de unidades del segundo producto");
-        int b2=teclado.nextInt();
-        System.out.println("ingrese el valor unitario del segundo producto");
-        double p2=teclado.nextInt();
-        System.out.println("ingrese el costo unitario del segundo producto");
-        double c2=teclado.nextInt();
-
-        System.out.println("ingrese la cantidad de unidades del tercer producto");
-        int b3=teclado.nextInt();
-        System.out.println("ingrese el valor unitario del tercer producto");
-        double p3=teclado.nextInt();
-        System.out.println("ingrese el costo unitario del tercer producto");
-        double c3=teclado.nextInt();
-
-        //por aquí necesito vuestra ayuda por que si son más de 3 productos no se que hacer
-
-        //calculo cuanto ganaré con todos los productos
-        double g=b1*p1+b2*p2+b3*p3;
-
-        //calculo cuanto beneficio me genera cada producto
-        double g1=p1-c1;
-        double g2=p2-c2;
-        double g3=p3-c3;
-
-        // y aquí me perdí, ayudenme con algunas funciones y ciclos para ordenar este desorden
-        // necesito que esto funciones para cualquier cantidad de productos distintos que quiera
-        // y poder saber cuanto ganaré potencialmente vendiendo
-        // todo y cuanto beneficio tendría vendiendo todo
-        //
-
-
     }
 
     private static  double obtenerGananciaTotal(int[] cantidadUnidadesProductos, double[] valoresProductos){
