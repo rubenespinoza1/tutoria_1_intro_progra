@@ -32,6 +32,10 @@ public class ResolucionPruebaBuenasPracticas {
             cantidadUnidadesProductos[i] = ingresarCantidadUnidadesProducto((i + 1));
             valoresProductos[i] = ingresarPrecioProducto( false, (i + 1));
             costosProductos[i] = ingresarPrecioProducto(true, (i + 1));
+            if (costosProductos[i] > valoresProductos[i]){
+                System.out.println("El valor del producto no puede ser menor al costo de produccion");
+                i--;
+            }
         }
         System.out.println("La ganancia total de los productos es: " + obtenerGananciaTotal(cantidadUnidadesProductos, valoresProductos));
         System.out.println("El beneficio total obteneido luego de vender todo es: " + obtenerBeneficioTotal(cantidadUnidadesProductos, valoresProductos, costosProductos));
