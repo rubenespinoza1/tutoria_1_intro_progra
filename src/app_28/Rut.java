@@ -43,7 +43,12 @@ public class Rut {
         return 11 - aplicarModulo11();
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Rut{" +
+                "cuerpoRut='" + cuerpoRut + '\'' +
+                ", digitoVerificador='" + digitoVerificador + '\'' +
+                ", esRutValido=" + esRutValido() +
+                '}';
+    }
 }

@@ -7,7 +7,6 @@ public class App28 {
         Persona persona = new Persona("Ruben Espinoza Osses", "08/07/1999",
                 rut);
         System.out.println(persona);
-        System.out.println(rut.esRutValido());
     }
 
 }
