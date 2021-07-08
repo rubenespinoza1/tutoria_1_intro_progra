@@ -22,12 +22,16 @@ public class Punto {
         double y1 = this.y;
         double y2 = punto.getY();
 
-        double distancia = Math.sqrt(Math.pow((x2 - x1),2) + Math.pow((y2 - y1),2));
-
-        return distancia;
+        return Math.sqrt(obtenerRestaAlCuadrado(x2, x1) + obtenerRestaAlCuadrado(y2, y1));
     }
 
-    public static void getMensajeDeBienvenida(){
+    private double obtenerRestaAlCuadrado(double variable1, double variable2){
+        return Math.pow(variable1 - variable2, 2);
+    }
+
+    public static void getMensajeDeBienvenida()
+    {
+
         System.out.println("Hola");
     }
 
@@ -38,8 +42,7 @@ public class Punto {
         double y1 = this.y;
         double y2 = punto.getY();
 
-        Punto puntoMedio = new Punto((x1 + x2) / 2,(y1 + y2) / 2);
-        return puntoMedio;
+        return new Punto((x1 + x2) / 2,(y1 + y2) / 2);
     }
 
     public double getX() {
