@@ -1,5 +1,7 @@
 package app_28;
 
+import java.util.Locale;
+
 public class Rut {
 
     String cuerpoRut;
@@ -8,17 +10,20 @@ public class Rut {
 
     public Rut(String cuerpoRut, String digitoVerificador) {
         this.cuerpoRut = cuerpoRut;
-        this.digitoVerificador = digitoVerificador;
+        this.digitoVerificador = digitoVerificador.toLowerCase();
 
         StringBuilder cuerpoInv = new StringBuilder(cuerpoRut);
         this.cuerpoInvertido = cuerpoInv.reverse().toString();
     }
 
     public boolean esRutValido(){
-        return this.digitoVerificador.equals(String.valueOf(obtenerDigitoVerificador()));
+        return this.digitoVerificador.equals(obtenerDigitoVerificador());
     }
 
     private int multiplicarPorIndices(){
+        if (!this.cuerpoRut.matches("[0-9]{1,8}")){
+            return 0;
+        }
         int sumaProductos = 0;
         int[] indices = {2, 3, 4, 5, 6, 7};
         int j = 0;
@@ -39,8 +44,16 @@ public class Rut {
         return modulo11;
     }
 
-    public int obtenerDigitoVerificador(){
-        return 11 - aplicarModulo11();
+    public String obtenerDigitoVerificador(){
+        int dvObtenido = 11 - aplicarModulo11();
+        if (dvObtenido == 11){
+            return "0";
+        }else if (dvObtenido == 10){
+            return "k";
+        }else {
+            return String.valueOf(dvObtenido);
+        }
+
     }
 
     @Override
