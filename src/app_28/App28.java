@@ -3,10 +3,11 @@ package app_28;
 public class App28 {
 
     public static void main(String[] args) {
+        Rut rut = new Rut("20106191", "1");
         Persona persona = new Persona("Ruben Espinoza Osses", "08/07/1999",
-                new Rut("20106191", "1"));
-
+                rut);
         System.out.println(persona);
+        System.out.println(rut.esRutValido());
     }
 
 }
