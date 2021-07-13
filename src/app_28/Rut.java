@@ -40,8 +40,7 @@ public class Rut {
 
     private int aplicarModulo11(){
         int resultadoProductos = multiplicarPorIndices();
-        int modulo11 = resultadoProductos % 11;
-        return modulo11;
+        return resultadoProductos % 11;
     }
 
     public String obtenerDigitoVerificador(){
