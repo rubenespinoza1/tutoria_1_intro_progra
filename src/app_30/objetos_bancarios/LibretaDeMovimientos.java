@@ -41,6 +41,6 @@ public class LibretaDeMovimientos extends ObjetoBancario{
         Movimiento movimiento = new Movimiento(fecha, super.titular, destinatario, montoATransferir, "Transferencia a " + destinatario.getNombre());
         this.movimientos.add(movimiento);
         destinatario.getLibretaDeMovimientos().recibirDinero(super.titular, montoATransferir, fecha);
-        this.montoCuenta -= montoATransferir;
+        this.montoCuenta -= montoATransferir;//this.montoCuenta = this.montoCuenta - montoATransferir;
     }
 }

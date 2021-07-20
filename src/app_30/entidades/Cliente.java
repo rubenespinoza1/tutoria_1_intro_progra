@@ -10,10 +10,10 @@ public class Cliente extends Persona{
 
     private LibretaDeMovimientos libretaDeMovimientos;
     private TarjetaDeTrasferencias tarjetaDeTrasferencias;
+    private Random r = new Random();
 
     public Cliente(String nombre, String apellido) {
         super(nombre, apellido);
-        Random r = new Random();
         this.libretaDeMovimientos = new LibretaDeMovimientos(r.nextInt(10000)+30000, this, "fecha", r.nextInt(500000) + 1);
         mostrarDineroRestante();
     }

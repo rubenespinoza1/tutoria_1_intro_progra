@@ -5,8 +5,8 @@ import app_30.objetos_bancarios.TarjetaDeTrasferencias;
 
 public class Persona {
 
-    private String nombre;
-    private String apellido;
+    protected String nombre;
+    protected String apellido;
 
     public Persona(String nombre, String apellido) {
         this.nombre = nombre;

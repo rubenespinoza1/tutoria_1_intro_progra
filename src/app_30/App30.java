@@ -5,8 +5,8 @@ import app_30.entidades.Cliente;
 public class App30 {
 
     public static void main(String[] args) {
-        Cliente cliente1 = new Cliente("Ruben", "Espinoza");
-        Cliente cliente2 = new Cliente("Rodrigo", "Gonzales");
+        Cliente cliente1 = new Cliente("Cliente", "1");
+        Cliente cliente2 = new Cliente("Cliente", "2");
 
 
         cliente1.transferirDinero(cliente2, 10000, "Fecha de hoy");
